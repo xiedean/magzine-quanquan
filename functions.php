@@ -71,13 +71,31 @@ function quanquan_setup() {
 }
 endif;
 
+$post_used = '';
 function get_featured_posts()
-{
+{ 
+	global $wpdb,$post_used;
 	$posts = array();
 	$categories = get_categories();
 	foreach($categories as $cate) {
-		$arg = array();
-		$posts[] = query_posts($arg);
+		if($post_used) { 
+			$term = $wpdb->get_row($wpdb->prepare("SELECT * FROM $wpdb->term_relationships WHERE term_taxonomy_id = '$cate->term_id' AND object_id NOT IN ($post_used) ORDER BY object_id DESC"));
+			$post_used .= ','.$term->object_id;
+		} else  {
+			$term = $wpdb->get_row($wpdb->prepare("SELECT * FROM $wpdb->term_relationships WHERE term_taxonomy_id = '$cate->term_id' ORDER BY object_id DESC"));
+			
+			$post_used = $term->object_id;
+		}
+		//echo $term->object_id."<br/>";
+		$posts[] = get_post($term->object_id);
+
 	}
+
 	return $posts;
+}
+
+function get_left_posts() 
+{
+	global $post_used;
+	return get_posts(array('exclude'=>$post_used));
 }

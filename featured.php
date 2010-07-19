@@ -1,4 +1,16 @@
 
+<?php 
+$postFeatured = get_featured_posts();
+foreach($postFeatured as $p) {
+	echo $p->ID." -- <br/>";
+}
+$postLeft = get_left_posts();
+foreach($postLeft as $p) {
+	echo $p->ID." +++ <br/>";
+}
+
+?>
+
 <?php /* Display navigation to next/previous pages when applicable */ ?>
 <?php if ( $wp_query->max_num_pages > 1 ) : ?>
 	<div id="nav-above" class="navigation">
