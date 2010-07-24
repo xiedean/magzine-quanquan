@@ -19,18 +19,15 @@ get_header(); ?>
 		<div id="container">
 			<div id="featured">
 				<?php get_template_part('featured','index');?>
+				<div class="clr"></div>
 			</div><!-- #featured -->
+			
 			<div id="latest">
-			<?php
-			/* Run the loop to output the posts.
-			 * If you want to overload this in a child theme then include a file
-			 * called loop-index.php and that will be used instead.
-			 */
-			 get_template_part( 'loop', 'index' );
-			?>
+				<?php get_template_part( 'latest', 'index' );?>
+				<div class="clr"></div>
 			</div><!-- #latest -->
 		</div><!-- #container -->
 
-<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>
 
