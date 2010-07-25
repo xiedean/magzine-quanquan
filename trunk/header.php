@@ -5,8 +5,8 @@
  * Displays all of the <head> section and everything up till <div id="main">
  *
  * @package WordPress
- * @subpackage Twenty_Ten
- * @since Twenty Ten 1.0
+ * @subpackage quanquan
+ * @since quanquan 1.0
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -18,7 +18,7 @@
 	 * We filter the output of wp_title() a bit -- see
 	 * twentyten_filter_wp_title() in functions.php.
 	 */
-	wp_title( '|', true, 'right' );
+	wp_title( '|', true, 'right' ).bloginfo('title');
 
 	?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />

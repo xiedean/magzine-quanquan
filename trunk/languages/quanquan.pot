@@ -84,7 +84,7 @@ msgstr ""
 #: attachment.php:58 attachment.php:105 loop.php:94 loop.php:117 loop.php:159
 #: onecolumn-page.php:27 page.php:32 single.php:53
 msgid "Edit"
-msgstr ""
+msgstr "±‡º≠"
 
 #: attachment.php:98 functions.php:299 loop.php:109 loop.php:137
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
@@ -431,3 +431,7 @@ msgid ""
 "background, threaded-comments, sticky-post, translation-ready, microformats, "
 "rtl-language-support, editor-style"
 msgstr ""
+
+#. sidebar 
+msgid "Links"
+msgstr "”—«È¡¥Ω”"

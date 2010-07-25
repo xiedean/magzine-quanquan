@@ -3,8 +3,8 @@
  * The Sidebar containing the primary and secondary widget areas.
  *
  * @package WordPress
- * @subpackage Twenty_Ten
- * @since Twenty Ten 1.0
+ * @subpackage Quanquan
+ * @since Quanquan 1.0
  */
 ?>
 
@@ -18,24 +18,28 @@
 	 * some default sidebar stuff just in case.
 	 */
 	if ( ! dynamic_sidebar( 'primary-widget-area' ) ) : ?>
-	
+			<li class="widget-container">
+				<h2><?php echo __('Search');?></h2>
+				<div class="line"></div>
+			</li>
 			<li id="search" class="widget-container widget_search">
 				<?php get_search_form(); ?>
 			</li>
 
 			<li id="archives" class="widget-container">
-				<h3 class="widget-title"><?php _e( 'Archives', 'twentyten' ); ?></h3>
+				<h2 class="widget-title"><?php _e( 'Links', 'quanquan' ); ?></h2>
+				<div class="line"></div>
 				<ul>
-					<?php wp_get_archives( 'type=monthly' ); ?>
+					
+					<?php quanquan_get_links(); ?>
 				</ul>
 			</li>
-
+			
 			<li id="meta" class="widget-container">
-				<h3 class="widget-title"><?php _e( 'Meta', 'twentyten' ); ?></h3>
+				<h2 class="widget-title"><?php _e( 'Categoroies', 'quanquan' ); ?></h2>
+				<div class="line"></div>
 				<ul>
-					<?php wp_register(); ?>
-					<li><?php wp_loginout(); ?></li>
-					<?php wp_meta(); ?>
+					<?php wp_list_categories(array('title_li'=>'','depth'=>0)); ?>
 				</ul>
 			</li>
 

@@ -66,7 +66,7 @@ DESCRIPTION: Two-column fixed layout with one sidebar right of content
 	width: 100%;
 }
 #content {
-	margin: 0 280px 0 20px;
+	margin: 0 280px 0 0;
 }
 #primary,
 #secondary {
@@ -369,7 +369,7 @@ a:hover {
 div.menu {
 	clear: right;
 	float: right;
-	margin: 14px 5px 18px 0;
+	margin: 14px 0px 18px 0;
 	width: 200px;
 	text-align: right;
 }
@@ -394,12 +394,12 @@ div.menu {
 
 #main {
 	overflow: hidden;
-	padding: 40px 0 0 0;
+	padding: 35px 0 0 0;
 }
 #content {
 	margin-bottom: 36px;
 }
-#content,
+
 #content input,
 #content textarea {
 	color: #333;
@@ -441,8 +441,7 @@ div.menu {
 #content h5,
 #content h6 {
 	color: #000;
-	margin: 0 0 20px 0;
-	line-height: 1.5em;
+
 }
 #content table {
 	border: 1px solid #e7e7e7;
@@ -499,22 +498,7 @@ div.menu {
 .page-title a:hover {
 	color: #FF4B33;
 }
-#content .entry-title {
-	color: #000;
-	font-size: 21px;
-	line-height: 1.3em;
-	font-weight: bold;
-	margin-bottom: 0;
-}
-.entry-title a:link,
-.entry-title a:visited {
-	color:#000;
-	text-decoration: none;
-}
-.entry-title a:active,
-.entry-title a:hover {
-	color: #FF4B33;
-}
+
 .entry-meta {
 	color: #888;
 	font-size: 12px;
@@ -838,7 +822,7 @@ div.menu {
 	display: block;
 }
 #nav-below {
-	margin: -18px 0 0 0;
+	margin: 20px 0 0 0;
 }
 
 
@@ -1117,7 +1101,7 @@ h3#reply-title {
 /* Main sidebars */
 #main .widget-area ul {
 	margin-left: 0;
-	padding: 0 20px 0 0;
+	padding: 0;
 }
 #main .widget-area ul ul {
 	border: none;
@@ -1291,16 +1275,28 @@ code {
 	margin-bottom: 20px;
 
 }
-h2 {
+h2, #content h2{
 	color: #000;
 	font-weight: bold;
 	font-family: "Helvetica Neue",Arial,Helvetica,"Nimbus Sans L",sans-serif;
 }
-.line {
+.line, .line1{
 	background: #ccc;
 	height: 5px;
 	margin-top: 5px;
+	
+}
+.line {
 	margin-bottom: 20px;
+}
+.line1 {
+	margin-bottom: 10px;
+}
+.line2 {
+	background: #ccc;
+	height: 1px;
+	margin-top: 5px;
+	margin-bottom: 10px;	
 }
 .clr {
 	clear: both;
@@ -1367,7 +1363,7 @@ h2 {
 }
 .latestTitle {
 	background:none repeat scroll 0 0 #000000;
-	bottom:0;
+	bottom:5px;
 	display:block;
 	opacity:0.8;
 	position:absolute;
@@ -1392,4 +1388,17 @@ h2 {
 .moreLink {
 	margin-top: 10px;
 	margin-bottom: 20px;
+}
+.widget-container h2 {
+	text-align: right;
+}
+#main .widget-area .widget-container  ul{
+	padding: 0;
+	margin: 0;
+	font-size: 14px;
+	line-height: 28px;
+}
+.widget-container li {
+	border-bottom: 1px solid #ccc;
+	list-style: none;
 }
