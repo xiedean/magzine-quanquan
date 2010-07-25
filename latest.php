@@ -1,10 +1,23 @@
-
+<?php
+/**
+ * The latest posts template.
+ *
+ * @package WordPress
+ * @subpackage Quanquan
+ * @since Quanquan 1.0
+ */
+?>
 
 <div id="partLeft">
 	<h2><?php echo __('LATEST POST');?></h2>
 	<div class="line"></div>
 <?php 
 $postFeatured = get_left_posts();
+if(single_cat_title('',false)){
+	$postFeatured = the_post();
+	var_dump($postFeatured);die();
+}
+
 $num = 0;
 foreach($postFeatured as $p) :
 	$post = $p;
@@ -22,9 +35,7 @@ foreach($postFeatured as $p) :
 			</div>
 		</div>
 		<div class="latestMeta">
-			<span class="latestDate"><?php echo get_the_date();?></span>
-			<span class="latestComment"><a href="<?php echo get_permalink($id); ?>#respond" title="<?php __('Leave a comment'); ?>" rel="bookmark"><?php echo $p->comment_count;?></a></span>
-			<div class="clr"></div>
+			<?php get_template_part('post-on','index')?>
 		</div>
 		<div class="description"><?php echo utf8substr($p->post_content); ?></div>
 		<div class="moreLink"><a href="<?php echo get_permalink($id); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'quanquan' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php echo __('Continue Reading...'); ?></a></div>
@@ -33,6 +44,12 @@ foreach($postFeatured as $p) :
 	$num++;
 endforeach;
 ?>
+<?php 
+if(single_cat_title('',false)):
+	get_template_part('page-navigation','index');
+endif;
+?>
+
 </div>
 <div id="partRight">
 	<?php get_sidebar(); ?>
