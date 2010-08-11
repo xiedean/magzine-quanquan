@@ -26,9 +26,9 @@
 <?php /* If there are no posts to display, such as an empty archive page */ ?>
 <?php if ( ! have_posts() ) : ?>
 	<div id="post-0" class="post error404 not-found">
-		<h1 class="entry-title"><?php _e( 'Not Found', 'twentyten' ); ?></h1>
+		<h1 class="entry-title"><?php _e( 'Not Found', 'quanquan' ); ?></h1>
 		<div class="entry-content">
-			<p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'twentyten' ); ?></p>
+			<p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'quanquan' ); ?></p>
 			<?php get_search_form(); ?>
 		</div><!-- .entry-content -->
 	</div><!-- #post-0 -->
@@ -74,7 +74,7 @@ while ( have_posts() ) : the_post();
 			<?php get_template_part('post-on','index')?>
 		</div>
 		<div class="description"><?php echo utf8substr($p->post_content); ?></div>
-		<div class="moreLink"><a href="<?php echo get_permalink($id); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'quanquan' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php echo __('Continue Reading...'); ?></a></div>
+		<div class="moreLink"><a href="<?php echo get_permalink($id); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'quanquan' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php echo __('Continue Reading...','quanquan'); ?></a></div>
 	</div>
 <?php $num++;?>
 <?php endwhile; // End the loop. Whew. ?>

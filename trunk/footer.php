@@ -30,9 +30,9 @@
 
 			<div id="site-generator">
 				<?php do_action( 'twentyten_credits' ); ?>
-				<a href="<?php echo esc_url( __('http://wordpress.org/', 'twentyten') ); ?>"
-						title="<?php esc_attr_e('Semantic Personal Publishing Platform', 'twentyten'); ?>" rel="generator">
-					<?php printf( __('Proudly powered by %s.', 'twentyten'), 'WordPress' ); ?>
+				<a href="<?php echo esc_url( __('http://wordpress.org/', 'quanquan') ); ?>"
+						title="<?php esc_attr_e('Semantic Personal Publishing Platform', 'quanquan'); ?>" rel="generator">
+					<?php printf( __('Proudly powered by %s.', 'quanquan'), 'WordPress' ); ?>
 				</a>
 			</div><!-- #site-generator -->
 
