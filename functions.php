@@ -111,9 +111,9 @@ function utf8substr($str, $position = null, $length = null)
 		$length = 70;
 	}
 	$str = str_replace ( "&nbsp;", "", $str );
-	$str = str_replace ( "&ldquo;", "¡°", $str );
-	$str = str_replace ( "&rdquo;", "¡±", $str );
-	$str = str_replace ( "&hellip;", "¡­", $str );
+	$str = str_replace ( "&ldquo;", "ï¿½ï¿½", $str );
+	$str = str_replace ( "&rdquo;", "ï¿½ï¿½", $str );
+	$str = str_replace ( "&hellip;", "ï¿½ï¿½", $str );
 	$str = strip_tags ( trim ( $str ) );
 	$str = trim ( $str );
 	$start_position = strlen ( $str );

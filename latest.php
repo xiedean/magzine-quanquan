@@ -38,7 +38,7 @@ foreach($postFeatured as $p) :
 			<?php get_template_part('post-on','index')?>
 		</div>
 		<div class="description"><?php echo utf8substr($p->post_content); ?></div>
-		<div class="moreLink"><a href="<?php echo get_permalink($id); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'quanquan' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php echo __('Continue Reading...'); ?></a></div>
+		<div class="moreLink"><a href="<?php echo get_permalink($id); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'quanquan' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php echo __('Continue Reading...','quanquan'); ?></a></div>
 	</div>
 <?php 	
 	$num++;
