@@ -9,7 +9,7 @@
 ?>
 
 <div id="partLeft">
-	<h2><?php echo __('LATEST POST');?></h2>
+	<h2><?php echo __('LATEST POST','quanquan');?></h2>
 	<div class="line"></div>
 <?php 
 $postFeatured = get_left_posts();

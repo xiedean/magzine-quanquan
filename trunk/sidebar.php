@@ -19,7 +19,7 @@
 	 */
 	if ( ! dynamic_sidebar( 'primary-widget-area' ) ) : ?>
 			<li class="widget-container">
-				<h2><?php echo __('Search');?></h2>
+				<h2><?php echo __('Search','quanquan');?></h2>
 				<div class="line"></div>
 			</li>
 			<li id="search" class="widget-container widget_search">

@@ -1303,6 +1303,7 @@ h2, #content h2{
 }
 .thumbnail {
 	margin-bottom: -2px;
+	text-align: center;
 }
 .thumbnail img {
 	padding: 0px;
